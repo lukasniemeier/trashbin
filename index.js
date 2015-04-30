@@ -5,7 +5,8 @@ var multer = require('multer');
 
 var app = express();
 
-console.log(process.env.CONFIG_BUFFER_SIZE);
+console.log("?" + process.env.CONFIG_BUFFER_SIZE);
+console.log("! " + process.env.CONFIG_BUFFER_SIZE || 5)
 var ring = new RingBuffer(process.env.CONFIG_BUFFER_SIZE || 5);
 
 console.log("log buffer capacity is " + ring.capacity());
