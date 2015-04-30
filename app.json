@@ -1,0 +1,5 @@
+{
+  "name": "trashbin",
+  "version": "0.1.0",
+  "description": "Logs all HTTP calls"
+}
