@@ -9,7 +9,8 @@ var ring = new RingBuffer(5);
 
 app.set('port', (process.env.PORT || 5000));
 
-app.use(bodyParser.json());
+app.use(bodyParser.json({strict: false)});
+app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(multer());
 
