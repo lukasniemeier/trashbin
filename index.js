@@ -7,6 +7,8 @@ var app = express();
 
 var ring = new RingBuffer(process.env.BUFFER_SIZE || 5);
 
+console.log("log buffer capacity is " + ring.capacity());
+
 app.set('port', (process.env.PORT || 5000));
 
 app.use(bodyParser.json());
