@@ -5,17 +5,7 @@ var multer = require('multer');
 
 var app = express();
 
-console.log("1 " + process.env.CONFIG_BUFFER_SIZE);
-console.log("2 " + (process.env.CONFIG_BUFFER_SIZE || 5));
-console.log("3 " + ((process.env.CONFIG_BUFFER_SIZE || 5) || 50));
-console.log("4 " + (((process.env.CONFIG_BUFFER_SIZE || 5) || 50)));
-console.log("5 " + (typeof  (((process.env.CONFIG_BUFFER_SIZE || 5) || 50))));
-console.log("6 " + (new Array(((process.env.CONFIG_BUFFER_SIZE || 5) || 50))).length);
-console.log("7 " + parseInt(5));
-console.log("8 " + (new Array((parseInt(process.env.CONFIG_BUFFER_SIZE || 5) || 50))).length);
-var ring = new RingBuffer(process.env.CONFIG_BUFFER_SIZE || 5);
-
-console.log("log buffer capacity is " + ring.capacity());
+var ring = new RingBuffer(parseInt(process.env.CONFIG_BUFFER_SIZE || 5));
 
 app.set('port', (process.env.PORT || 5000));
 
