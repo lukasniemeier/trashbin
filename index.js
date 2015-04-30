@@ -11,6 +11,7 @@ console.log("3 " + ((process.env.CONFIG_BUFFER_SIZE || 5) || 50));
 console.log("4 " + (((process.env.CONFIG_BUFFER_SIZE || 5) || 50)));
 console.log("5 " + (typeof  (((process.env.CONFIG_BUFFER_SIZE || 5) || 50))));
 console.log("6 " + (new Array(((process.env.CONFIG_BUFFER_SIZE || 5) || 50))).length);
+console.log("7 " + parseInt(5));
 var ring = new RingBuffer(process.env.CONFIG_BUFFER_SIZE || 5);
 
 console.log("log buffer capacity is " + ring.capacity());
