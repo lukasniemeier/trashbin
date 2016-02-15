@@ -5,7 +5,7 @@ var multer = require('multer');
 
 var app = express();
 
-var ring = new RingBuffer(process.env.BUFFER_SIZE || 5);
+var ring = new RingBuffer(parseInt(process.env.CONFIG_BUFFER_SIZE || 5));
 
 app.set('port', (process.env.PORT || 5000));
 
