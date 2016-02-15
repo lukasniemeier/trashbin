@@ -20,7 +20,7 @@ app.all('*', function(request, response) {
 		"source": request.ip, 
 		"method": request.method,
 		"path": request.url, 
-		"headers": request.headers, 
+		"headers": request.rawHeaders, 
 		"body": (request.body || "null")
 	};
 	ring.enq(body);
